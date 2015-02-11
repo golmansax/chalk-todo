@@ -1,0 +1,8 @@
+linters:
+  # The linters below here are failing because of haml-lint bugs
+  RuboCop:
+    ignored_cops:
+      - Style/SymbolProc
+
+  ImplicitDiv:
+    enabled: false
