@@ -8,7 +8,8 @@ Chk.TodoApp = (function () {
 
     init: function () {
       this._todos = new Chk.TodoCollection([
-        { name: 'Hello', id: 0 }
+        { name: 'Hello', id: 0 },
+        { name: 'Second', id: 1 },
       ]);
 
       this._render();

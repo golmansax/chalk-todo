@@ -12,7 +12,11 @@ Chk.TodoList = (function () {
     },
 
     render: function () {
-      return <div>{this.props.todos.map(this._renderTodo)}</div>;
+      return (
+        <ul className='list-group'>
+          {this.props.todos.map(this._renderTodo)}
+        </ul>
+      );
     }
 
   });
