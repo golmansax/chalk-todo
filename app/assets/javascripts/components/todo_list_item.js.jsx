@@ -12,6 +12,10 @@ Chk.TodoListItem = (function () {
         <li className='list-group-item row'>
           <div className='col-md-9'>
             <h3>{this.props.name}</h3>
+            <p>
+              <strong>Due date: </strong>
+              {this.props.due_date.calendar()}
+            </p>
           </div>
           <div className='col-md-3'>
             <button className='btn btn-lg btn-block btn-primary'>

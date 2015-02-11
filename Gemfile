@@ -13,6 +13,7 @@ gem 'uglifier', '>= 1.3.0'
 # Assets
 gem 'rails-assets-backbone'
 gem 'rails-assets-es5-shim'
+gem 'rails-assets-moment'
 
 group :development, :test do
   gem 'byebug'

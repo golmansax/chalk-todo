@@ -8,9 +8,9 @@ Chk.TodoApp = (function () {
 
     init: function () {
       this._todos = new Chk.TodoCollection([
-        { name: 'Hello', id: 0 },
-        { name: 'Second', id: 1 },
-      ]);
+        { name: 'Hello', due_date: '2014-01-01', id: 0 },
+        { name: 'Second', due_date: '2014-01-01', id: 1 }
+      ], { parse: true });
 
       this._render();
     },
