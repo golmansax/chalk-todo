@@ -7,3 +7,4 @@ script:
 - bundle exec travis lint --skip-completion-check
 - bundle exec rubocop -D
 - bundle exec haml-lint app/views
+- bundle exec scss-lint app/assets/stylesheets
