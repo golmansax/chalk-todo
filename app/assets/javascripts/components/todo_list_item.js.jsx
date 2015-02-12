@@ -21,7 +21,10 @@ Chk.TodoListItem = (function () {
             <button className='btn btn-lg btn-block btn-primary'>
               Mark Done
             </button>
-            <button className='btn btn-lg btn-block btn-default'>
+            <button
+              className='btn btn-lg btn-block btn-default'
+              onClick={this.props.remove}
+            >
               Remove
             </button>
           </div>

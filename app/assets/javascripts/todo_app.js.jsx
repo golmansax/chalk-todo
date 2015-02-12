@@ -12,12 +12,17 @@ Chk.TodoApp = (function () {
         { name: 'Second', due_date: '2014-01-01', id: 1 }
       ], { parse: true });
 
+      this._todos.on('add remove change', this._render.bind(this));
+
       this._render();
     },
 
     _render: function () {
       React.render(
-        <Chk.TodoList todos={this._todos.toJSON()} />,
+        <Chk.TodoList
+          todos={this._todos.toJSON()}
+          remove={this._todos.remove.bind(this._todos)}
+        />,
         window.document.getElementById('react-container')
       );
     }

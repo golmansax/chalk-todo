@@ -4,11 +4,18 @@ Chk.TodoList = (function () {
   return React.createClass({
 
     propTypes: {
-      todos: React.PropTypes.array.isRequired
+      todos: React.PropTypes.array.isRequired,
+      remove: React.PropTypes.func.isRequired
     },
 
     _renderTodo: function (todo) {
-      return <Chk.TodoListItem key={todo.id} {...todo} />;
+      return (
+        <Chk.TodoListItem
+          {...todo}
+          key={todo.id}
+          remove={this.props.remove.bind(this, todo.id)}
+        />
+      );
     },
 
     render: function () {
