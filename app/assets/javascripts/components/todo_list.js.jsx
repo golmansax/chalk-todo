@@ -14,7 +14,7 @@ Chk.TodoList = (function () {
           {...todo}
           key={todo.id}
           remove={this.props.remove.bind(this, todo.id)}
-          update={this.props..bind(this, todo.id)}
+          update={this.props.update.bind(this, todo.id)}
         />
       );
     },

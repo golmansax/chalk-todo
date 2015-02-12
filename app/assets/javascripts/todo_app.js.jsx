@@ -8,8 +8,11 @@ Chk.TodoApp = (function () {
 
     init: function () {
       this._todos = new Chk.TodoCollection([
-        { name: 'Hello', due_date: '2014-01-01', id: 0 },
-        { name: 'Second', due_date: '2014-01-01', id: 1 }
+        { name: 'Hello', due_date: '2014-01-01', id: 1 },
+        { name: 'Hello', due_date: '2014-01-01', id: 2 },
+        { name: 'Hello', due_date: '2014-01-01', id: 3 },
+        { name: 'Hello', due_date: '2014-01-01', id: 4 },
+        { name: 'Second', due_date: '2014-01-01', id: 5 }
       ], { parse: true });
 
       this._todos.on('add remove change', this._render.bind(this));
@@ -19,7 +22,7 @@ Chk.TodoApp = (function () {
 
     _render: function () {
       React.render(
-        <Chk.TodoList
+        <Chk.TodoListContainer
           todos={this._todos.toJSON()}
           remove={this._todos.remove.bind(this._todos)}
           update={this._todos.update.bind(this._todos)}
