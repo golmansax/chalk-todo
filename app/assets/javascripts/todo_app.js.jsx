@@ -18,7 +18,7 @@ Chk.TodoApp = (function () {
     _render: function () {
       React.render(
         <Chk.TodoList todos={this._todos.toJSON()} />,
-        document.getElementById('react-container')
+        window.document.getElementById('react-container')
       );
     }
 
