@@ -22,6 +22,7 @@ Chk.TodoApp = (function () {
         <Chk.TodoList
           todos={this._todos.toJSON()}
           remove={this._todos.remove.bind(this._todos)}
+          update={this._todos.update.bind(this._todos)}
         />,
         window.document.getElementById('react-container')
       );

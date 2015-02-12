@@ -4,7 +4,31 @@ Chk.TodoListItem = (function () {
   return React.createClass({
 
     propTypes: {
-      name: React.PropTypes.string.isRequired
+      name: React.PropTypes.string.isRequired,
+      remove: React.PropTypes.func.isRequired,
+      update: React.PropTypes.func.isRequired
+    },
+
+    _markComplete: function () {
+      this.props.update({ completed_date: moment() });
+    },
+
+    _renderDate: function () {
+      if (this.props.completed_date) {
+        return (
+          <p>
+            <strong>Completed date: </strong>
+            {this.props.completed_date.calendar()}
+          </p>
+        );
+      } else {
+        return (
+          <p>
+            <strong>Due date: </strong>
+            {this.props.due_date.calendar()}
+          </p>
+        );
+      }
     },
 
     render: function () {
@@ -12,13 +36,13 @@ Chk.TodoListItem = (function () {
         <li className='list-group-item row'>
           <div className='col-md-9'>
             <h3>{this.props.name}</h3>
-            <p>
-              <strong>Due date: </strong>
-              {this.props.due_date.calendar()}
-            </p>
+            {this._renderDate()}
           </div>
           <div className='col-md-3'>
-            <button className='btn btn-lg btn-block btn-primary'>
+            <button
+              className='btn btn-lg btn-block btn-primary'
+              onClick={this._markComplete}
+            >
               Mark Done
             </button>
             <button
