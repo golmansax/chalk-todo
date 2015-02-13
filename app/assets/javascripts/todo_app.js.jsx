@@ -39,6 +39,8 @@ Chk.TodoApp = (function () {
 (function () {
   'use strict';
 
-  var app = new Chk.TodoApp();
-  app.init();
+  if (window.document.getElementById('react-container')) {
+    var app = new Chk.TodoApp();
+    app.init();
+  }
 })();
