@@ -4,6 +4,8 @@ rvm:
 - 2.1.5
 cache:
   bundler: true
+  directories:
+  - node_modules
 before_install:
 - npm install
 script:
