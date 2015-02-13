@@ -14,3 +14,4 @@ script:
 - ./node_modules/.bin/jscs --esprima=esprima-fb app/assets/javascripts/
 - ./node_modules/.bin/jsxhint --verbose app/assets/javascripts/
 - bundle exec rspec
+- bundle exec teaspoon

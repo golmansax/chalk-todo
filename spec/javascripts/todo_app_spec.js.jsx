@@ -17,9 +17,8 @@ describe('todo_app', function () {
       'Start a company'
     ];
 
-    console.log(name_els);
     _.each(expected_names, function (name, index) {
-      expect(name_els[index].textContent).to.equal(name);
+      expect(name_els[index].props.children).to.equal(name);
     });
   });
 });
