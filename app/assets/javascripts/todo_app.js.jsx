@@ -8,11 +8,11 @@ Chk.TodoApp = (function () {
 
     init: function () {
       this._todos = new Chk.TodoCollection([
-        { name: 'Hello', due_date: '2014-01-01', id: 1 },
-        { name: 'Hello', due_date: '2014-01-01', id: 2 },
-        { name: 'Hello', due_date: '2014-01-01', id: 3 },
-        { name: 'Hello', due_date: '2014-01-01', id: 4 },
-        { name: 'Second', due_date: '2014-01-01', id: 5 }
+        { name: 'Cut hair', due_date: '2015-03-04', id: 1 },
+        { name: 'Wash car', due_date: '2015-02-20', id: 2 },
+        { name: 'Laundry', due_date: '2015-02-19', id: 3 },
+        { name: 'Buy groceries', due_date: '2015-02-18', id: 4 },
+        { name: 'Start a company', due_date: '2020-01-01', id: 5 }
       ], { parse: true });
 
       this._todos.on('add remove change', this._render.bind(this));
