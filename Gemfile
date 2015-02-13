@@ -18,9 +18,16 @@ gem 'rails-assets-moment'
 group :development, :test do
   gem 'byebug'
   gem 'haml-lint'
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'rubocop'
   gem 'scss-lint'
   gem 'spring'
+  gem 'spring-commands-rspec'
   gem 'travis'
   gem 'web-console', '~> 2.0'
+end
+
+group :test do
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
