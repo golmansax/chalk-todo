@@ -6,7 +6,8 @@ Chk.TodoApp = (function () {
 
     _todos: null,
 
-    init: function () {
+    init: function (options) {
+      this._container_el = options.container_el;
       this._todos = new Chk.TodoCollection([
         { name: 'Cut hair', due_date: '2015-03-04', id: 1 },
         { name: 'Wash car', due_date: '2015-02-20', id: 2 },
@@ -27,7 +28,7 @@ Chk.TodoApp = (function () {
           remove={this._todos.remove.bind(this._todos)}
           update={this._todos.update.bind(this._todos)}
         />,
-        window.document.getElementById('react-container')
+        this._container_el
       );
     }
 
@@ -39,8 +40,9 @@ Chk.TodoApp = (function () {
 (function () {
   'use strict';
 
-  if (window.document.getElementById('react-container')) {
+  var container_el = window.document.getElementById('react-container');
+  if (container_el) {
     var app = new Chk.TodoApp();
-    app.init();
+    app.init({ container_el: container_el });
   }
 })();
