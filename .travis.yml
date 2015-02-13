@@ -1,7 +1,9 @@
 language: ruby
 rvm:
 - 2.1.5
-cache: bundler
+cache:
+  directories:
+  - vendor/bundle
 before_install:
 - npm install
 script:
