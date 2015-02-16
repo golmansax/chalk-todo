@@ -7,9 +7,9 @@ Chk.TodoListContainer = (function () {
       todos: React.PropTypes.array.isRequired
     },
 
-    onChange: function(event) {
-      if (event.target.checked == true) {
-        alert("Hello");
+    onChange: function (event) {
+      if (event.target.checked === true) {
+        window.alert('Hello');
       }
     },
 
@@ -19,7 +19,8 @@ Chk.TodoListContainer = (function () {
           <h4>
             <div className='row checkbox'>
               <label>
-                <input type='checkbox' onChange={this.onChange}defaultChecked={true} />
+                <input type='checkbox' onChange={this.onChange}
+                  defaultChecked={true} />
                 Show Completed
               </label>
             </div>
@@ -32,5 +33,3 @@ Chk.TodoListContainer = (function () {
 
   });
 })();
-
-
