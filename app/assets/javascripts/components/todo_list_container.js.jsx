@@ -14,7 +14,7 @@ Chk.TodoListContainer = (function () {
             <div className='row checkbox'>
               <label>
                 <input type='checkbox' defaultChecked={true} />
-                Show completed
+                Show Completed
               </label>
             </div>
           </h4>
