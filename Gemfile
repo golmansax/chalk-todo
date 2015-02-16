@@ -27,6 +27,9 @@ group :development, :test do
   gem 'teaspoon'
   gem 'travis'
   gem 'web-console', '~> 2.0'
+
+  # Assets
+  gem 'rails-assets-dirty-chai'
 end
 
 group :test do

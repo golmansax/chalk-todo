@@ -162,6 +162,9 @@ GEM
       sprockets-rails
     rails-assets-backbone (1.1.2)
       rails-assets-underscore (>= 1.5.0)
+    rails-assets-chai (2.0.0)
+    rails-assets-dirty-chai (1.0.2)
+      rails-assets-chai
     rails-assets-es5-shim (4.1.0)
     rails-assets-moment (2.9.0)
     rails-assets-underscore (1.7.0)
@@ -276,6 +279,7 @@ DEPENDENCIES
   haml-rails
   rails (= 4.2.0)
   rails-assets-backbone
+  rails-assets-dirty-chai
   rails-assets-es5-shim
   rails-assets-moment
   react-rails (~> 1.0.0.pre)!
