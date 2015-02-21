@@ -1,5 +1,5 @@
 {
-  "name": "chalk_todo",
+  "name": "todo-app-with-chk",
   "engines": {
     "npm": "2.1.x",
     "node": "0.10.x"
@@ -12,6 +12,6 @@
   },
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/ChalkSchools/synchroform.git"
+    "url" : "https://github.com/golmansax/todo-app-with-chk.git"
   }
 }

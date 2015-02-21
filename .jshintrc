@@ -90,7 +90,7 @@
     "_"           : true,     // Underscore
     "Backbone"    : true,     // Backbone
     "routie"      : true,     // Frontend routing
-    "Chk"         : true,     // Global Chalk object
+    "Chk"         : true,     // Global object
     "window"      : true,     // Only expose this browser global
     "isMobile"    : true,     // Mobile detection library
     "Papa"        : true,     // Papa Parse
