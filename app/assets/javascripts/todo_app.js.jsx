@@ -5,11 +5,16 @@ Chk.TodoApp = (function () {
 
     componentWillMount: function () {
       this._todos = new Chk.TodoCollection([
-        { name: 'Cut hair', due_date: '2015-03-04', id: 1 },
-        { name: 'Wash car', due_date: '2015-02-20', id: 2 },
-        { name: 'Laundry', due_date: '2015-02-19', id: 3 },
-        { name: 'Buy groceries', completed_date: '2015-02-10', id: 4 },
-        { name: 'Start a company', due_date: '2020-01-01', id: 5 }
+        { name: 'Cut hair', due_date: '2015-03-04', id: 1, priority: 2 },
+        { name: 'Wash car', due_date: '2015-03-20', id: 2, priority: 2 },
+        { name: 'Laundry', due_date: '2015-03-19', id: 3, priority: 1 },
+        {
+          name: 'Buy groceries',
+          completed_date: '2015-02-10',
+          id: 4,
+          priority: 1
+        },
+        { name: 'Start a company', due_date: '2020-01-01', id: 5, priority: 3 }
       ], { parse: true });
     },
 
