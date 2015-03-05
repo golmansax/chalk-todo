@@ -33,11 +33,11 @@ Chk.TodoListItem = (function () {
 
     _renderPriority: function () {
       return (
-          <p>
-            <strong>Priority: </strong>
-            {this.props.priority}
-          </p>
-        );
+        <p>
+          <strong>Priority: </strong>
+          {this.props.priority}
+        </p>
+      );
     },
 
     render: function () {
