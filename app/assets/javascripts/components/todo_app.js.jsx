@@ -39,12 +39,3 @@ Chk.TodoApp = (function () {
 
   });
 })();
-
-(function () {
-  'use strict';
-
-  var container_el = window.document.getElementById('react-container');
-  if (container_el) {
-    React.render(<Chk.TodoApp />, container_el);
-  }
-})();
