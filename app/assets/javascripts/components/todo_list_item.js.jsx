@@ -35,7 +35,11 @@ Chk.TodoListItem = (function () {
       return (
         <p>
           <strong>Priority: </strong>
-          {this.props.priority}
+          <span className={'priority p' + this.props.priority}>
+            <span>L</span>
+            <span>M</span>
+            <span>H</span>
+          </span>
         </p>
       );
     },

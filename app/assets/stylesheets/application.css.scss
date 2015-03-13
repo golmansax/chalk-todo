@@ -12,3 +12,24 @@ h5,
 h6 {
   font-family: $font-family-headers;
 }
+
+.priority {
+  span {
+    display: none;
+  }
+  &.p1 {
+    span:nth-child(1){
+      display: inline;
+    }
+  }
+  &.p2 {
+    span:nth-child(2){
+      display: inline;
+    }
+  }
+  &.p3 {
+    span:nth-child(3){
+      display: inline;
+    }
+  }
+}
