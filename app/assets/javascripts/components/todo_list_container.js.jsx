@@ -7,10 +7,34 @@ Chk.TodoListContainer = (function () {
       todos: React.PropTypes.array.isRequired
     },
 
+    getInitialState: function () {
+      return {
+        show_all: true,
+      }
+    },
+
     _onChange: function (event) {
       if (event.target.checked === true) {
         window.alert('Hello');
       }
+    },
+
+    _toggleComplete: function(event) {
+      var newState = this.state.show_all ? false : true;
+      this.setState({
+        'show_all': newState
+      });
+    },
+
+    _renderToggleButton: function () {
+      return (
+        <button
+          onClick={this._toggleComplete}
+          className='btn btn-lg btn-block btn-default'
+        >
+          { this.state.show_all ? 'Hide' : 'Show' } completed!
+        </button>
+      );
     },
 
     render: function () {
@@ -26,6 +50,7 @@ Chk.TodoListContainer = (function () {
                 />
                 Alert
               </label>
+              {this._renderToggleButton()}
             </div>
           </h4>
           <br />
