@@ -5,6 +5,9 @@ Chk.TodoListItem = (function () {
 
     propTypes: {
       name: React.PropTypes.string.isRequired,
+      due_date: React.PropTypes.string,
+      completed_date: React.PropTypes.string,
+      priority: React.PropTypes.number.isRequired,
       remove: React.PropTypes.func.isRequired,
       update: React.PropTypes.func.isRequired
     },
@@ -36,9 +39,9 @@ Chk.TodoListItem = (function () {
         <p>
           <strong>Priority: </strong>
           <span className={'priority p' + this.props.priority}>
-            <span>L</span>
-            <span>M</span>
-            <span>H</span>
+            <span>Low</span>
+            <span>Medium</span>
+            <span>High</span>
           </span>
         </p>
       );
