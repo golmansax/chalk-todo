@@ -18,14 +18,14 @@ Chk.TodoListItem = (function () {
         return (
           <p>
             <strong>Completed date: </strong>
-            {this.props.completed_date.calendar()}
+            {moment(this.props.completed_date).calendar()}
           </p>
         );
       } else {
         return (
           <p>
             <strong>Due date: </strong>
-            {this.props.due_date.calendar()}
+            {moment(this.props.due_date).calendar()}
           </p>
         );
       }

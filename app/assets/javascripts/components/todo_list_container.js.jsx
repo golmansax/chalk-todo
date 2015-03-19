@@ -24,7 +24,7 @@ Chk.TodoListContainer = (function () {
                   onChange={this._onChange}
                   defaultChecked={true}
                 />
-                Show Completed
+                Alert
               </label>
             </div>
           </h4>
