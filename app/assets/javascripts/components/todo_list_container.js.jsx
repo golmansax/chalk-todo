@@ -27,7 +27,9 @@ Chk.TodoListContainer = (function () {
     },
 
     _renderToggleButton: function () {
-      var glyphClass = this.state.show_all ? 'glyphicon glyphicon-remove' : 'glyphicon glyphicon-ok';
+      var glyphClass = this.state.show_all ?
+                          'glyphicon glyphicon-remove' :
+                          'glyphicon glyphicon-ok';
       var btnAction = this.state.show_all ? 'Hide' : 'Show';
       return (
         <button

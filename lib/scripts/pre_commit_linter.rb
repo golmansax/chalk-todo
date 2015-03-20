@@ -56,9 +56,12 @@ def run_jsxhint(file)
   end
 end
 
-RB_FILES = `git diff --cached --name-only --diff-filter=AM | grep -E "(\.rb)"`
-JS_FILES = `git diff --cached --name-only --diff-filter=AM | grep -E "(/javascripts/)"`
-CSS_FILES = `git diff --cached --name-only --diff-filter=AM | grep -E "(/stylesheets/)"`
+RB_FILES =
+`git diff --cached --name-only --diff-filter=AM | grep -E "(\.rb)"`
+JS_FILES =
+`git diff --cached --name-only --diff-filter=AM | grep -E "(/javascripts/)"`
+CSS_FILES =
+`git diff --cached --name-only --diff-filter=AM | grep -E "(/stylesheets/)"`
 
 if RB_FILES.length > 0
   RB_FILES.split("\n").each do |file|
