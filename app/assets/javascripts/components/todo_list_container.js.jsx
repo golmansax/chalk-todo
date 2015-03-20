@@ -9,8 +9,8 @@ Chk.TodoListContainer = (function () {
 
     getInitialState: function () {
       return {
-        show_all: true,
-      }
+        show_all: true
+      };
     },
 
     _onChange: function (event) {
@@ -19,20 +19,23 @@ Chk.TodoListContainer = (function () {
       }
     },
 
-    _toggleComplete: function(event) {
+    _toggleComplete: function () {
       var newState = this.state.show_all ? false : true;
       this.setState({
-        'show_all': newState
+        show_all: newState
       });
     },
 
     _renderToggleButton: function () {
+      var glyphClass = this.state.show_all ? 'glyphicon glyphicon-remove' : 'glyphicon glyphicon-ok';
+      var btnAction = this.state.show_all ? 'Hide' : 'Show';
       return (
         <button
           onClick={this._toggleComplete}
-          className='btn btn-lg btn-block btn-default'
+          className='btn btn-lg btn-default'
         >
-          { this.state.show_all ? 'Hide' : 'Show' } completed!
+          {btnAction} completed!
+          <span className={glyphClass} ></span>
         </button>
       );
     },
