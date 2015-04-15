@@ -34,26 +34,12 @@ Chk.TodoListItem = (function () {
       }
     },
 
-    _renderPriority: function () {
-      return (
-        <p>
-          <strong>Priority: </strong>
-          <span className={'priority p' + this.props.priority}>
-            <span>Low</span>
-            <span>Medium</span>
-            <span>High</span>
-          </span>
-        </p>
-      );
-    },
-
     render: function () {
       return (
         <li className='list-group-item row'>
           <div className='col-md-9'>
             <h3 className='todo-list-item-name'>{this.props.name}</h3>
             {this._renderDate()}
-            {this._renderPriority()}
           </div>
           <div className='col-md-3'>
             <button

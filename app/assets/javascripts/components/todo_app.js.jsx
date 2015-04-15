@@ -15,7 +15,7 @@ Chk.TodoApp = (function () {
           priority: 3
         },
         { name: 'Start a company', due_date: '2020-01-01', id: 5, priority: 2 }
-      ], { parse: true });
+      ]);
     },
 
     componentDidMount: function () {
