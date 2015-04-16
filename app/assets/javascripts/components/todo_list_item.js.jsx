@@ -34,7 +34,7 @@ Chk.TodoListItem = (function () {
       }
     },
 
-    _renderPriority: function() {
+    _renderPriority: function () {
       return (
         <p>
           <strong>Priority: </strong>

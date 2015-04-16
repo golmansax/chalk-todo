@@ -7,8 +7,8 @@ Chk.TodoListContainer = (function () {
       todos: React.PropTypes.array.isRequired
     },
 
-    _alert: function(){
-      alert("hey")
+    _alert: function () {
+      window.alert('hey');
     },
 
     _onChange: function (event) {
