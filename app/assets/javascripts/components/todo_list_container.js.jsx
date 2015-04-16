@@ -7,6 +7,10 @@ Chk.TodoListContainer = (function () {
       todos: React.PropTypes.array.isRequired
     },
 
+    _alert: function(){
+      alert("hey")
+    },
+
     _onChange: function (event) {
       if (event.target.checked === true) {
         window.alert('Hello');
@@ -26,6 +30,11 @@ Chk.TodoListContainer = (function () {
                 />
                 Alert
               </label>
+
+              <button
+                onClick={this._alert}
+              />
+                Show Hide/Competed
             </div>
           </h4>
           <br />
