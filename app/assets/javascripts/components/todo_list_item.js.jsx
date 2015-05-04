@@ -38,9 +38,8 @@ Chk.TodoListItem = (function () {
       return (
         <li className='list-group-item row'>
           <div className='col-md-9'>
-           <h3 className='todo-list-item-name'>{this.props.name}</h3>
-              {this._renderDate()}
-              {this.props.priority}
+            <h3 className='todo-list-item-name'>{this.props.name}</h3>
+            {this._renderDate()}
           </div>
           <div className='col-md-3'>
             <button

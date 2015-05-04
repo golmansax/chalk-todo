@@ -11,7 +11,6 @@ GIT
 
 GEM
   remote: https://rubygems.org/
-  remote: https://rails-assets.org/
   specs:
     actionmailer (4.2.0)
       actionpack (= 4.2.0)
@@ -56,6 +55,8 @@ GEM
     autoprefixer-rails (5.0.0.2)
       execjs
       json
+    backbone-rails (1.1.2)
+      rails (>= 3.0.0)
     backports (3.6.4)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -76,6 +77,9 @@ GEM
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
     erubis (2.7.0)
+    es5-shim-rails (4.0.1)
+      actionpack (>= 3.1)
+      railties (>= 3.1)
     ethon (0.7.3)
       ffi (>= 1.3.0)
     execjs (2.3.0)
@@ -129,6 +133,8 @@ GEM
     mime-types (2.4.3)
     mini_portile (0.6.2)
     minitest (5.5.1)
+    momentjs-rails (2.10.2)
+      railties (>= 3.1)
     multi_json (1.11.0)
     multipart-post (2.0.0)
     net-http-persistent (2.9.4)
@@ -160,14 +166,6 @@ GEM
       bundler (>= 1.3.0, < 2.0)
       railties (= 4.2.0)
       sprockets-rails
-    rails-assets-backbone (1.1.2)
-      rails-assets-underscore (>= 1.5.0)
-    rails-assets-chai (2.0.0)
-    rails-assets-dirty-chai (1.0.2)
-      rails-assets-chai
-    rails-assets-es5-shim (4.1.0)
-    rails-assets-moment (2.9.0)
-    rails-assets-underscore (1.7.0)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.5)
@@ -266,17 +264,16 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  backbone-rails
   bootstrap-sass
   byebug
   database_cleaner
+  es5-shim-rails
   factory_girl_rails
   haml-lint
   haml-rails
+  momentjs-rails
   rails (= 4.2.0)
-  rails-assets-backbone
-  rails-assets-dirty-chai
-  rails-assets-es5-shim
-  rails-assets-moment
   react-rails (~> 1.0.0.pre)!
   rspec-rails (~> 3.0.0)
   rubocop
